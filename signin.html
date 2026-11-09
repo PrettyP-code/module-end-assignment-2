@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel | Sign In</title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="auth-container">
+
+        <div class="auth-image signin-image">
+            <div class="image-content">
+                <h1>Welcome Back!</h1>
+                <p>Discover new places and unforgettable experiences.</p>
+            </div>
+        </div>
+
+        <div class="form-container">
+
+            <div class="form-box signin-box">
+
+                <h2>Sign In</h2>
+                <p class="subtitle">Welcome back! Please login to continue.</p>
+
+                <form id="signinForm" novalidate>
+
+                    <div class="mb-3">
+                        <label for="signinEmail" class="form-label">
+                            Email Address
+                        </label>
+                        <input type="email" class="form-control" id="signinEmail"
+                               placeholder="Enter your registered email">
+                        <small class="error" id="signinEmailError"></small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="signinPassword" class="form-label">
+                            Password
+                        </label>
+
+                        <div class="password-box">
+                            <input type="password" class="form-control"
+                                   id="signinPassword" placeholder="Enter your password">
+                            <button type="button" class="toggle-password"
+                                    data-target="signinPassword">Show</button>
+                        </div>
+
+                        <small class="error" id="signinPasswordError"></small>
+                    </div>
+
+                    <button type="submit" class="btn submit-btn w-100">
+                        Sign In
+                    </button>
+
+                </form>
+
+                <p class="switch-page">
+                    Don't have an account?
+                    <a href="SignUp.html">Create Account</a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

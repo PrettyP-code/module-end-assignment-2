@@ -1,0 +1,387 @@
+
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #263238;
+    line-height: 1.6;
+}
+
+section {
+    scroll-margin-top: 70px;
+}
+
+
+/* Navigation Bar */
+
+.navbar {
+    background-color: #102c36;
+    padding: 18px 0;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.navbar-brand i {
+    color: #36c6bd;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.nav-link:hover {
+    color: #36c6bd !important;
+}
+
+
+/* Hero Section */
+
+.hero {
+    min-height: 650px;
+
+    background-image:
+        linear-gradient(rgba(0, 25, 35, 0.55), rgba(0, 25, 35, 0.55)),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+    padding: 100px 0 60px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-subtitle {
+    color: #49ddd1;
+    letter-spacing: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 58px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.hero-content p:not(.hero-subtitle) {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.explore-btn {
+    background-color: #27b8ad;
+    color: white;
+    padding: 13px 28px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.explore-btn:hover {
+    background-color: #168e86;
+    color: white;
+}
+
+
+/* Common Section Headings */
+
+.section-subtitle {
+    color: #1ba99e;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+section h2 {
+    font-size: 34px;
+    font-weight: bold;
+    color: #173c46;
+}
+
+.section-description {
+    max-width: 600px;
+    margin: 15px auto 0;
+    color: #718087;
+}
+
+
+/* Features Section */
+
+.features {
+    background-color: #f4f9f9;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 35px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    width: 65px;
+    height: 65px;
+    background-color: #e1f6f3;
+    color: #159f95;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+    margin: 0 auto 20px;
+}
+
+.feature-card h4 {
+    font-size: 20px;
+    color: #173c46;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #718087;
+    margin-bottom: 0;
+}
+
+
+/* Destinations Section */
+
+.destinations {
+    background-color: #ffffff;
+}
+
+.destination-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+}
+
+.destination-card img {
+    height: 240px;
+    object-fit: cover;
+}
+
+.destination-card .card-body {
+    padding: 22px;
+}
+
+.destination-card .card-title {
+    color: #173c46;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.destination-card .card-text {
+    color: #718087;
+    min-height: 75px;
+}
+
+.destination-link {
+    text-decoration: none;
+    color: #159f95;
+    font-weight: bold;
+}
+
+.destination-link:hover {
+    color: #08776f;
+}
+
+
+/* Contact Section */
+
+.contact {
+    background-color: #f1f8f8;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact-description {
+    color: #718087;
+    margin-bottom: 25px;
+}
+
+.contact-icon {
+    color: #159f95;
+    margin-right: 10px;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.form-label {
+    font-weight: bold;
+    color: #173c46;
+}
+
+.form-control {
+    padding: 12px;
+    border: 1px solid #d9e3e3;
+}
+
+.form-control:focus {
+    border-color: #27b8ad;
+    box-shadow: 0 0 5px rgba(39, 184, 173, 0.3);
+}
+
+.send-btn {
+    background-color: #159f95;
+    color: white;
+    padding: 12px 25px;
+    font-weight: bold;
+}
+
+.send-btn:hover {
+    background-color: #08776f;
+    color: white;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #102c36;
+    color: white;
+    padding: 35px 0 20px;
+}
+
+footer h4 {
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+footer h4 i {
+    color: #36c6bd;
+}
+
+footer p {
+    color: #c1d0d2;
+}
+
+.copyright {
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    border-top: 1px solid #36505a;
+    padding-top: 15px;
+}
+
+
+/* Tablet Responsive Design */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .destination-card img {
+        height: 210px;
+    }
+
+}
+
+
+/* Mobile Responsive Design */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .navbar-nav {
+        padding-top: 15px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .hero {
+        min-height: 520px;
+        background-position: center;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: auto;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-content p:not(.hero-subtitle) {
+        font-size: 16px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    .feature-card {
+        padding: 30px 20px;
+    }
+
+    .destination-card img {
+        height: 230px;
+    }
+
+    .destination-card .card-text {
+        min-height: auto;
+    }
+
+    .contact-form {
+        padding: 22px;
+    }
+
+}
