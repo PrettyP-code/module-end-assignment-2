@@ -11,13 +11,10 @@ body {
     min-height: 100vh;
 }
 
-
-
 .auth-container {
     display: flex;
     min-height: 100vh;
 }
-
 
 .auth-image {
     width: 45%;
@@ -30,17 +27,15 @@ body {
 }
 
 .signup-image {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.6)
-    ), url("../Images/samplepic1.jpg");
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
+        url("./images/samplepic1.jpg");
 }
 
 .signin-image {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.6)
-    ), url("../Images/samplepic2.jpg");
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
+        url("./images/samplepic2.jpg");
 }
 
 .image-content h1 {
@@ -51,7 +46,6 @@ body {
 .image-content p {
     font-size: 1.1rem;
 }
-
 
 .form-container {
     width: 55%;
@@ -81,8 +75,6 @@ body {
     margin-bottom: 22px;
 }
 
-
-
 .form-label {
     font-weight: 600;
     color: #333;
@@ -97,8 +89,6 @@ body {
     border-color: #268b86;
     box-shadow: 0 0 5px rgba(38, 139, 134, 0.3);
 }
-
-
 
 .password-box {
     display: flex;
@@ -121,8 +111,6 @@ body {
     cursor: pointer;
 }
 
-
-
 .error {
     color: #dc3545;
     font-size: 0.8rem;
@@ -130,8 +118,6 @@ body {
     margin-top: 4px;
     min-height: 16px;
 }
-
-
 
 .submit-btn {
     background-color: #217d78;
@@ -147,8 +133,6 @@ body {
     background-color: #155d59;
     color: white;
 }
-
-
 
 .switch-page {
     text-align: center;
@@ -166,12 +150,9 @@ body {
     text-decoration: underline;
 }
 
-
-
 .signin-box {
     max-width: 430px;
 }
-
 
 @media (min-width: 769px) and (max-width: 1024px) {
 
@@ -193,8 +174,6 @@ body {
         font-size: 2rem;
     }
 }
-
-
 
 @media (max-width: 768px) {
 

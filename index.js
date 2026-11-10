@@ -1,9 +1,8 @@
 
-// Get all forms
+// Get forms
 
 const signupForm = document.getElementById("signupForm");
 const signinForm = document.getElementById("signinForm");
-
 
 // Show error message
 
@@ -11,20 +10,17 @@ function showError(id, message) {
     document.getElementById(id).textContent = message;
 }
 
-
 // Clear error message
 
 function clearError(id) {
     document.getElementById(id).textContent = "";
 }
 
-
 // Email validation
 
 function validEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
-
 
 // Signup validation
 
@@ -39,7 +35,6 @@ function validateSignup() {
     const password = document.getElementById("signupPassword").value;
     const confirmPassword = document.getElementById("confirmPassword").value;
 
-
     // Full name
 
     if (fullname === "") {
@@ -48,7 +43,6 @@ function validateSignup() {
     } else {
         clearError("fullnameError");
     }
-
 
     // Email
 
@@ -62,8 +56,7 @@ function validateSignup() {
         clearError("signupEmailError");
     }
 
-
-    // Phone number
+    // Phone
 
     if (phone === "") {
         showError("phoneError", "Phone number is required");
@@ -74,7 +67,6 @@ function validateSignup() {
     } else {
         clearError("phoneError");
     }
-
 
     // City
 
@@ -88,7 +80,6 @@ function validateSignup() {
         clearError("cityError");
     }
 
-
     // Password
 
     if (password === "") {
@@ -101,7 +92,6 @@ function validateSignup() {
     } else {
         clearError("signupPasswordError");
     }
-
 
     // Confirm password
 
@@ -118,21 +108,15 @@ function validateSignup() {
     return isValid;
 }
 
-
-// Real-time signup validation
+// Signup form
 
 if (signupForm) {
 
     signupForm.querySelectorAll("input").forEach(function(input) {
 
-        input.addEventListener("input", function() {
-            validateSignup();
-        });
+        input.addEventListener("input", validateSignup);
 
     });
-
-
-    // Signup form submission
 
     signupForm.addEventListener("submit", function(event) {
 
@@ -146,26 +130,16 @@ if (signupForm) {
             const city = document.getElementById("city").value.trim();
             const password = document.getElementById("signupPassword").value;
 
-
-            // Get existing users
-
             let users = JSON.parse(localStorage.getItem("users")) || [];
-
-
-            // Check whether email already exists
 
             const existingUser = users.find(function(user) {
                 return user.email === email;
             });
 
-
             if (existingUser) {
                 showError("signupEmailError", "This email is already registered");
                 return;
             }
-
-
-            // Create new user
 
             const newUser = {
                 fullname: fullname,
@@ -175,25 +149,18 @@ if (signupForm) {
                 password: password
             };
 
-
-            // Save user details
-
             users.push(newUser);
 
             localStorage.setItem("users", JSON.stringify(users));
 
-
             alert("Registration successful! Please sign in.");
 
-            window.location.href = "SignIn.html";
-
+            window.location.href = "./signin.html";
         }
 
     });
 
 }
-
-
 
 // Signin validation
 
@@ -203,7 +170,6 @@ function validateSignin() {
 
     const email = document.getElementById("signinEmail").value.trim();
     const password = document.getElementById("signinPassword").value;
-
 
     if (email === "") {
         showError("signinEmailError", "Email is required");
@@ -215,7 +181,6 @@ function validateSignin() {
         clearError("signinEmailError");
     }
 
-
     if (password === "") {
         showError("signinPasswordError", "Password is required");
         isValid = false;
@@ -226,22 +191,15 @@ function validateSignin() {
     return isValid;
 }
 
-
-
-// Real-time signin validation
+// Signin form
 
 if (signinForm) {
 
     signinForm.querySelectorAll("input").forEach(function(input) {
 
-        input.addEventListener("input", function() {
-            validateSignin();
-        });
+        input.addEventListener("input", validateSignin);
 
     });
-
-
-    // Signin form submission
 
     signinForm.addEventListener("submit", function(event) {
 
@@ -252,24 +210,17 @@ if (signinForm) {
             const email = document.getElementById("signinEmail").value.trim().toLowerCase();
             const password = document.getElementById("signinPassword").value;
 
-
-            // Get registered users
-
             let users = JSON.parse(localStorage.getItem("users")) || [];
-
-
-            // Check email and password
 
             const loginUser = users.find(function(user) {
                 return user.email === email && user.password === password;
             });
 
-
             if (loginUser) {
 
                 alert("Login successful! Welcome " + loginUser.fullname);
 
-                window.location.href = "travelapp.html";
+                window.location.href = "./travelapp.html";
 
             } else {
 
@@ -284,8 +235,6 @@ if (signinForm) {
 
 }
 
-
-
 // Show and hide password
 
 const toggleButtons = document.querySelectorAll(".toggle-password");
@@ -295,9 +244,7 @@ toggleButtons.forEach(function(button) {
     button.addEventListener("click", function() {
 
         const targetId = button.getAttribute("data-target");
-
         const passwordInput = document.getElementById(targetId);
-
 
         if (passwordInput.type === "password") {
 
@@ -314,3 +261,21 @@ toggleButtons.forEach(function(button) {
     });
 
 });
+
+// Contact form
+
+const contactForm = document.querySelector(".contact-form");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        alert("Thank you! Your message has been received.");
+
+        contactForm.reset();
+
+    });
+
+}

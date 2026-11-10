@@ -21,7 +21,6 @@ section {
     scroll-margin-top: 70px;
 }
 
-
 /* Navigation Bar */
 
 .navbar {
@@ -29,17 +28,23 @@ section {
     padding: 18px 0;
 }
 
-.navbar-brand {
+.logo {
     font-size: 24px;
-    color: #ffffff;
+    font-weight: bold;
+    color: white;
 }
 
-.navbar-brand i {
+.logo span,
+footer span {
     color: #36c6bd;
 }
 
+.navbar-brand:hover {
+    color: white;
+}
+
 .nav-link {
-    color: #ffffff !important;
+    color: white !important;
     margin-left: 20px;
     font-size: 15px;
 }
@@ -48,12 +53,14 @@ section {
     color: #36c6bd !important;
 }
 
+.navbar-toggler {
+    background-color: white;
+}
 
 /* Hero Section */
 
 .hero {
     min-height: 650px;
-
     background-image:
         linear-gradient(rgba(0, 25, 35, 0.55), rgba(0, 25, 35, 0.55)),
         url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600");
@@ -72,7 +79,7 @@ section {
     max-width: 650px;
 }
 
-.hero-subtitle {
+.small-heading {
     color: #49ddd1;
     letter-spacing: 4px;
     font-size: 14px;
@@ -86,13 +93,13 @@ section {
     margin: 15px 0;
 }
 
-.hero-content p:not(.hero-subtitle) {
+.hero-content p:not(.small-heading) {
     font-size: 18px;
     margin-bottom: 30px;
     max-width: 500px;
 }
 
-.explore-btn {
+.main-btn {
     background-color: #27b8ad;
     color: white;
     padding: 13px 28px;
@@ -100,15 +107,14 @@ section {
     font-weight: bold;
 }
 
-.explore-btn:hover {
+.main-btn:hover {
     background-color: #168e86;
     color: white;
 }
 
-
 /* Common Section Headings */
 
-.section-subtitle {
+.section-heading > p:first-child {
     color: #1ba99e;
     font-size: 13px;
     font-weight: bold;
@@ -116,18 +122,15 @@ section {
     margin-bottom: 8px;
 }
 
-section h2 {
+.section-heading h2 {
     font-size: 34px;
     font-weight: bold;
     color: #173c46;
 }
 
-.section-description {
-    max-width: 600px;
-    margin: 15px auto 0;
+.section-heading p:last-child {
     color: #718087;
 }
-
 
 /* Features Section */
 
@@ -141,6 +144,7 @@ section h2 {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transition: 0.3s;
+    height: 100%;
 }
 
 .feature-card:hover {
@@ -163,7 +167,7 @@ section h2 {
     margin: 0 auto 20px;
 }
 
-.feature-card h4 {
+.feature-card h3 {
     font-size: 20px;
     color: #173c46;
     margin-bottom: 12px;
@@ -174,11 +178,10 @@ section h2 {
     margin-bottom: 0;
 }
 
-
 /* Destinations Section */
 
 .destinations {
-    background-color: #ffffff;
+    background-color: white;
 }
 
 .destination-card {
@@ -187,6 +190,7 @@ section h2 {
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: 0.3s;
+    height: 100%;
 }
 
 .destination-card:hover {
@@ -195,54 +199,40 @@ section h2 {
 }
 
 .destination-card img {
+    width: 100%;
     height: 240px;
     object-fit: cover;
 }
 
-.destination-card .card-body {
+.destination-info {
     padding: 22px;
 }
 
-.destination-card .card-title {
+.destination-info h3 {
     color: #173c46;
     font-size: 22px;
     font-weight: bold;
 }
 
-.destination-card .card-text {
+.destination-info p {
     color: #718087;
     min-height: 75px;
 }
 
-.destination-link {
+.destination-info a {
     text-decoration: none;
     color: #159f95;
     font-weight: bold;
 }
 
-.destination-link:hover {
+.destination-info a:hover {
     color: #08776f;
 }
-
 
 /* Contact Section */
 
 .contact {
     background-color: #f1f8f8;
-}
-
-.contact h2 {
-    margin-bottom: 20px;
-}
-
-.contact-description {
-    color: #718087;
-    margin-bottom: 25px;
-}
-
-.contact-icon {
-    color: #159f95;
-    margin-right: 10px;
 }
 
 .contact-form {
@@ -267,19 +257,6 @@ section h2 {
     box-shadow: 0 0 5px rgba(39, 184, 173, 0.3);
 }
 
-.send-btn {
-    background-color: #159f95;
-    color: white;
-    padding: 12px 25px;
-    font-weight: bold;
-}
-
-.send-btn:hover {
-    background-color: #08776f;
-    color: white;
-}
-
-
 /* Footer */
 
 footer {
@@ -288,13 +265,9 @@ footer {
     padding: 35px 0 20px;
 }
 
-footer h4 {
+footer h2 {
     font-weight: bold;
     margin-bottom: 12px;
-}
-
-footer h4 i {
-    color: #36c6bd;
 }
 
 footer p {
@@ -308,7 +281,6 @@ footer p {
     border-top: 1px solid #36505a;
     padding-top: 15px;
 }
-
 
 /* Tablet Responsive Design */
 
@@ -325,9 +297,7 @@ footer p {
     .destination-card img {
         height: 210px;
     }
-
 }
-
 
 /* Mobile Responsive Design */
 
@@ -360,11 +330,11 @@ footer p {
         font-size: 38px;
     }
 
-    .hero-content p:not(.hero-subtitle) {
+    .hero-content p:not(.small-heading) {
         font-size: 16px;
     }
 
-    section h2 {
+    .section-heading h2 {
         font-size: 28px;
     }
 
@@ -376,12 +346,11 @@ footer p {
         height: 230px;
     }
 
-    .destination-card .card-text {
+    .destination-info p {
         min-height: auto;
     }
 
     .contact-form {
         padding: 22px;
     }
-
 }
